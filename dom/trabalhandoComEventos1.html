@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <!-- onclick="navIn5Sec(event) -->
+        <a wait-a-little href="https://google.com.br">Google</a>
+    </div>
+    <script>
+        function navIn5Sec(e) {
+            e.preventDefault()
+            console.log('saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        // const a = document.querySelector('a')
+        // a.onclick = navIn5Sec
+
+        const a = document.querySelector('[wait-a-little]') // usar propriedades personalizadas para referir-se a um elemento.
+        a.onclick = navIn5Sec
+    </script>
+</body>
