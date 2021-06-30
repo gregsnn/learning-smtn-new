@@ -1,4 +1,4 @@
-const fatorialNum = function(numero) {
+function fatorialNum(numero) {
     resultado = 1
 
     for(i = 1; i <= numero; i++)
@@ -7,6 +7,6 @@ const fatorialNum = function(numero) {
     return resultado
 }
 
-console.log(fatorialNum(5))
+console.log(fatorialNum(4))
 
 // (y)

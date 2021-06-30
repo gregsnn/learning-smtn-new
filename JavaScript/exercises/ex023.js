@@ -10,5 +10,3 @@ function calcularNotaFinal(codAluno, nota1, nota2, nota3){
 }
 
 calcularNotaFinal(123, 5, 5, 5)
-
-// consultar uFleck

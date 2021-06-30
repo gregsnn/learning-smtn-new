@@ -1,11 +1,11 @@
-const inteiro = function(a = 100, b = 3) {
+const inteiro = function(a, b) {
     return Math.floor(a / b)
 }
 
-const resto = function(a = 100, b = 3) {
+const resto = function(a, b) {
     return a % b
 }
 
-console.log(`Inteiro: ${inteiro()}, Resto: ${resto()}`)
+console.log(`Inteiro: ${inteiro(100, 3)}, Resto: ${resto(100, 3)}`)
 
 // (y)

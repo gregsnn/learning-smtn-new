@@ -21,5 +21,3 @@ let vetorA = [1, 2, 3]
 let vetorB = [4, 5, 6]
 
 trocaValores(vetorA, vetorB)
-
-// consultar uFleck

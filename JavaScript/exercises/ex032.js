@@ -1,4 +1,4 @@
-function media(){
+function media() {
     let numeros = [10, 10, 20, 30, 30]
     let soma = 0
 

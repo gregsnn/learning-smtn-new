@@ -37,5 +37,3 @@ function calcularTempo(alturaMenor, taxaAlturaMenor, alturaMaior, taxaAlturaMaio
 
 console.log(calcularCrescimento(160, 2, 130, 4));
 
-
-// consultar uFleck

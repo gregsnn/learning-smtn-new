@@ -1,4 +1,4 @@
-const bhaskara = function(ax2, bx, c) {
+function bhaskara(ax2, bx, c) {
     resultado = []
 
     let delta = (bx ** bx) - (4 * ax2 * c)

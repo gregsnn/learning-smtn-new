@@ -1,4 +1,4 @@
-const notasAlunos = function (notas) {
+function notasAlunos(notas) {
 
     let notaRadius = arredondar(notas)
 
@@ -9,7 +9,7 @@ const notasAlunos = function (notas) {
     }
 }
 
-function arredondar (notas) {
+function arredondar(notas) {
     if (notas % 5 > 2) {
         return notas + (5 - (notas % 5))
     } else {

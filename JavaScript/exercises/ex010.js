@@ -1,4 +1,4 @@
-const verifyInt = function(numero) {
+function verifyInt(numero) {
 
     if(numero % 3 < 1) {
         return true

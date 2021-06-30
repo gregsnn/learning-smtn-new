@@ -1,4 +1,4 @@
-const numeros = function(extenso) {
+function numeros(extenso) {
 
     switch (extenso) {
         case "0": return "Zero"

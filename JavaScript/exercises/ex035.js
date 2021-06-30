@@ -9,7 +9,7 @@ function adicionar(pilha, adiciona) {
 
     console.log("Vetor inicial: " + pilha)
     console.log("Vetor adicionado: " + adiciona)
-    return "resultado: " + pilha + "," + adiciona
+    return `resultado: ${pilha.concat(adiciona)}`
 }
 
 console.log(adicionar())

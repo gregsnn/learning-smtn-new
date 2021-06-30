@@ -1,4 +1,4 @@
-const cardapio = function (quantidade, codigo) {
+function cardapio(quantidade, codigo) {
 
     switch (codigo) {
         case 100:

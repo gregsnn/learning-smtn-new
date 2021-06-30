@@ -76,5 +76,3 @@ function elaborarResultado(contador100, contador50, contador10, contador5, conta
 }
 
 console.log(sacarDinheiro(2));
-
-// consultar com uFleck

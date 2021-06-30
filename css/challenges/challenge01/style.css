@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body { margin: 0; padding: 0; font-family: sans-serif; }
+
+.parents {
+    background-color: #23424a;
+    color: #fff;
+
+    width: 80%;
+    max-width: 75ch;
+
+    padding: 3em;
+    margin: 0 auto;
+}
+
+.child {
+    width: 50%;
+}

@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.parents {
+    background-color: #23424a;
+    padding: 50px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.child { 
+    background-color: #38cfd9;
+    padding: 5em; /* 16(default font-size) * 5(em) = 80(px) */
+    width: 100%;
+}
