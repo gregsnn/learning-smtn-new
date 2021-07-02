@@ -1,0 +1,178 @@
+/* general styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: .9rem;
+
+    padding-top: .5em;
+}
+
+h2 {
+    font-size: 1.5rem;
+
+    padding-top: 1em;
+}
+
+button {
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 15em;
+}
+
+.container {
+    width: 75%;
+
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+/* header */
+header {
+    background: #136c72;
+
+    border-bottom: 1px double rgba(100, 100, 100, 0.55);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+.nav__list {
+    padding: .6em 0;
+}
+
+.nav__item {
+    list-style: none;
+
+    display: inline-block;
+}
+
+.nav__item + .nav__item {
+    margin-left: 1em;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__link:is(:hover, :focus) {
+    opacity: .75;
+
+    text-shadow: .1px .1px 2px rgba(255, 255, 255, 0.433);
+}
+
+.nav__link-button {
+    background-color: #fff;
+    padding: .5em 1em;
+}
+
+.nav__link-button .nav__link {
+    color: #136c72;
+    font-weight: 700;
+}
+
+
+/* hero section */
+.hero {
+    padding: 2em 0;
+
+    background: #23424a;
+    color: #fff;
+}
+
+.hero__text {
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+
+    align-self: flex-start;
+}
+
+.hero button {
+    font-weight: 500;
+
+    color: #23424a;
+    background-color: #38CFD9;
+
+    margin-top: 1em;
+    padding: 1em 4em;
+}
+
+button:is(:hover, :focus) {
+    cursor: pointer;
+    opacity: .75;
+}
+
+
+/* main section */
+.section__body {
+    margin-top: 2em;
+
+    gap: 2em;
+}
+
+main aside {
+    width: 32%;
+    color: #fff;
+    background: #326d7c;
+
+    text-align: center;
+
+    padding: 1em;
+}
+
+main aside h2 {
+    font-weight: 900;
+
+    font-size: 1.5em;
+}
+
+main article {
+    width: 63%;
+
+    text-align: justify;
+}
+
+main article h2 {
+    color: #326d7c;
+}
+
+
+/* footer */
+footer {
+    padding: 2em;
+}
+
+
+/* queries */
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .d-none {
+        display: none;
+    }
+}
