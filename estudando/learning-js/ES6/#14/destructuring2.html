@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+
+  <script>
+    // composicao = eh um // aquele objeto eh alguma coisa (quando criamos objetos a partir de objetos)
+
+    let prod = {
+      description: 'notebook',
+      price: 1800,
+      details: { // composicao = tem um (quando objeto eh um valor de outro objeto)
+        fabricante: 'abc',
+        modelo: 'xyz'
+      }
+    }
+
+    // let { description, price } = prod
+    // let { description: d, price: p} = prod
+    // let { desconto } = prod // undefined
+    // let { desconto = 'default' } = prod // caso use em valor que ja esteja preenchido retorna o valor original
+    
+    let { details: { fabricante: f = 123, modelo: m = 'nao informado'} } = prod
+
+    console.log(f, m)
+
+  </script>
+</body>
+
+</html>

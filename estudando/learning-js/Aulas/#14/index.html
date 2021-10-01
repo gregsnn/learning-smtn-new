@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Callback Function`s</h1>
+  
+  <script>
+    function showArticle( id, callbackSuccess, callbackError ) {
+      if ( false ) {
+        callbackSuccess(`Callback Function's in JS`, `Callback function's are sooooo cool`)
+      } else {
+        callbackError(`Corrupted files...`)
+      }
+    }
+
+    let calllbackSus = function ( title, description) {
+      document.write(`<h3> ${title} </h3> 
+                      <hr />
+                      <p> ${description} </p>`)
+    }
+
+    let callbackE = function ( e ) {
+      document.write(`<p> <strong>${e}</strong> </p>`)
+    }
+
+    showArticle(1, calllbackSus, callbackE)
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>try - catch - finally - throw</h1>
+  
+  <script>
+    let video = [
+      {
+        nome: 'Fullmetal Alchemist',
+        categoria: 'Anime'
+      }
+    ]
+
+    try {
+      function getVideo(video) {
+        console.log(video[3]['nome'])
+      }
+      getVideo(video)
+
+    } catch (error) {
+      treatError(error)
+      console.log('tratamento de erro')
+
+      throw new Error(`pausa a aplicacao e joga o erro`)
+      
+    } finally {
+      console.log(`sempre passa por aqui (try / catch)`)
+    }
+
+    function treatError(e) {
+      console.log(e)
+    }
+  </script>
+</body>
+</html>

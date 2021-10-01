@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+  4 Pilares'' OO
+  <br><br>
+  OPERADOR SUPER'()' = deve vir antes da criacao de qlqr atributo da class que puxa extends
+
+  <script>
+
+    class Animal {
+
+      constructor(cor, tamanho, peso) {
+        this.cor = cor
+        this.tamanho = tamanho
+        this.peso = peso
+      }
+
+      dormir() {
+        console.log('Dormir')
+      }
+    }
+
+    class Passaro extends Animal {
+
+      constructor(bico, cor, tamanho, peso) {
+        super(cor, tamanho, peso)
+        this.bico = bico
+      }
+
+      voar() {
+        console.log('voar')
+      }
+    }
+
+    class Papagaio extends Passaro {
+
+      constructor(speak, bico, cor, tamanho, peso) {
+        super(bico, cor, tamanho, peso)
+        this.speak = speak
+      }
+    }
+
+    let bird = new Passaro('grande', 'azul', 25, 320)
+    let parrot = new Papagaio(true, 'medio', 'verde', 50, 250)
+    let parrot2 = new Papagaio(false, 'pequeno', 'branco', 10, 80)
+
+    console.log(parrot)
+    console.log(parrot2)
+    console.log(bird)
+
+  </script>
+</body>
+
+</html>

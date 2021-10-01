@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio #8</title>
+</head>
+<body>
+  
+  <script>
+
+    class Sofa {
+
+      constructor(inclinavel, cor, assentos) {
+        this.inclinavel = inclinavel
+        this.cor = cor
+        this.assentos = assentos
+      }
+
+      Inclinavel(condition) {
+        (this.inclinavel === true) ? console.log('sofa inclinavel') : console.log('sofa nao inclinavel')
+      }
+    }
+    let sofa = new Sofa(true)
+    
+    let sofas = []
+    sofas.push(new Sofa(false, 'preto', 2))
+    sofas.push(new Sofa(true, 'branco', 5))
+    sofas.push(new Sofa(true, 'cinza', 3))
+    sofas.push(new Sofa(false, 'amarelo', 6))
+    sofas.push(new Sofa(true, 'blackbird', 1))
+
+    console.log(sofas)
+    console.log(sofa.Inclinavel())
+  </script>
+</body>
+</html>

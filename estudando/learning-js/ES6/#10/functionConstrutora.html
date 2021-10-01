@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+  <script>
+    
+    let Car = function() {
+
+      this.cor = 'Amarelo'
+      this.modelo = 'Chevette'
+      this.velocidadeAtual = 0
+      this.velocidadeMax = 180
+
+      this.acelear = function() {
+        //this.velocidadeAtual += 10
+
+        let velocidade = this.getVelocidadeAtual() + 10 // ou getVelocidadeAtual
+        this.setVelocidadeAtual(velocidade)
+      }
+
+      this.getVelocidadeAtual = function() {
+        return this.velocidadeAtual
+      }
+
+      this.setVelocidadeAtual = function(velocidade) {
+        this.velocidadeAtual = velocidade
+      }
+
+    }
+
+    let car = new Car()
+    console.log(`A velocidade atual eh de: ${car.getVelocidadeAtual()}`)
+    car.acelear()
+    console.log(`A velocidade atual eh de: ${car.getVelocidadeAtual()}`)
+
+  </script>
+</body>
+
+</html>

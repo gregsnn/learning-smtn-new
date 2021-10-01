@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+  <script>
+
+    let bicicleta1 = {
+      cor: 'Branca',
+      marcha: 'Unica',
+      aro: 12,
+      pedalar() { console.log('Metodo pedalar executado') }
+    }
+
+    let bicicleta2 = {
+      cor: 'Azul',
+      marcha: '12',
+      aro: 26,
+      pedalar() { console.log('Metodo pedalar executado') }
+    }
+
+    // console.log(bicicleta1)
+    // console.log(bicicleta2)
+
+    //=======================
+
+    let BicicletaFactory = function(cor, marcha, aro, tipoPedal) {
+      // logica
+      // requisicao http
+      // resposta http
+      return {
+        cor,
+        marcha,
+        aro,
+        tipoPedal,
+        pedalar() { console.log(`Metodo pedalar executado`) }
+      }
+    }
+
+    let bicicleta3 = BicicletaFactory('vermelha', 18, 22, 'metal')
+    console.log(bicicleta3)
+
+    let bicicleta4 = BicicletaFactory('rosa', 'unica', 12, 'plastico')
+    console.log(bicicleta4)
+
+  </script>
+</body>
+
+</html>

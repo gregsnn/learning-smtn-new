@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Desafio #6</h1>
+
+  <input type="text" id="inputText">
+  <button onclick="add()" type="button">Add</button>
+  <button onclick="order()" type="button">Order</button>
+
+  <p id="results"></p>
+
+  <script>
+    let inputValue = document.getElementById('inputText')
+
+    let objetos = ['Cadeira', 'Impressora', 'Garfo']
+    console.log(objetos)
+
+    function add() {
+      let found = objetos.some(el => el === inputValue.value)
+
+      if (inputValue.value === '') {
+        alert('Informe um valor valido')
+      } else {
+        if (found) {
+          alert('Objeto ja adicionado')
+        } else {
+          objetos.push(inputValue.value)
+          console.log(objetos)
+          
+          inputValue.value = ''
+        }
+      }
+    }
+
+    function order() {
+      objetos.sort()
+      console.log(objetos)
+    }
+  </script>
+</body>
+</html>

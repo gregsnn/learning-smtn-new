@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+
+<body>
+  <h1>Desafio #2</h1>
+
+  <script>
+    let name = prompt('Digite seu Nome: ')
+    let age = prompt('Digite a Sua Idade: ')
+
+    let results;
+
+    if (age >= 0 && age < 15) {
+      results = 'Crianca'
+    } else if (age < 30) {
+      results = 'Jovem'
+    } else if (age < 60) {
+      results = 'Adulto'
+    } else {
+      results = 'Idoso'
+    }
+
+    document.write(`Ola ${name}, vi aqui que tu tens ${age} ${(age > 1) ? 'anos' : 'ano'}, sendo classificado como ${results}`)
+  </script>
+</body>
+
+</html>

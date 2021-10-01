@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+  <script>
+    let nome = 'greg'
+    let idade = 21
+    let sexo = 'masculino'
+    let profissao = 'developer'
+
+    let obj = { // antiga sintaxe
+      nome: nome,
+      idade: idade,
+      sexo: sexo,
+      profissao: profissao,
+      showResume: function() {
+        console.log(`${this.nome} com ${this.idade} anos, de sexo ${this.sexo}, trabalha como ${profissao}`)
+      }
+    }
+
+
+    let obj2 = { // atual sintaxe
+      nome, // nome sendo igual ao da variavel passa a aplicar variavel como valor
+      idade,
+      sexo,
+      profissao,
+      showResume() {
+        console.log(`${this.nome} com ${this.idade} anos, de sexo ${this.sexo}, trabalha como ${profissao}`)
+      }
+    }
+
+    // console.log(obj)
+    // obj.showResume()
+    console.log(obj2)
+    obj2.showResume()
+
+  </script>
+</body>
+
+</html>

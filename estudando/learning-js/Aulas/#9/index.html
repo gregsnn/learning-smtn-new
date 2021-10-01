@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>if/else +++</h1>
+
+  <script>
+    // if (!(5 == 2) && 3 >= 1 || 'a' == 'b') {
+    //   document.write('Verdadeiro')
+    // } else {
+    //   document.write('Falso')
+    // }
+
+    let media = 7.5
+    let maxFaltas = 15
+    let nota = prompt('Digite a Nota do Aluno')
+    let faltas = prompt('Digite a quantidade de Faltas')
+    // let nota = Math.random() * 10
+
+    if (nota >= media && faltas <= maxFaltas) {
+      // document.write('Aprovado')
+    } else {
+      // document.write('Reprovado')
+    }
+
+    let results = (nota >= media && faltas <= maxFaltas) ? 'Aprovado' : 'Reprovado'
+    document.write(results)
+  </script>
+</body>
+</html>

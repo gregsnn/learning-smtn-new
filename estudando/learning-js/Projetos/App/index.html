@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>Mata Mosquito - The Game</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center mt-2">
+          <img src="./assets/img/game.png" alt="victory">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <div class="mb-2">
+            <select id="nivel" class="rounded border-0 p-2">
+              <option value="">--Selecione o Nivel de Dificuldade--</option>
+              <option value="normal">Normal</option>
+              <option value="dificil">Dificil</option>
+              <option value="hardcore">Hardcore</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center mt-2">
+          <button class="btn btn-danger btn-lg" type="submit" onclick="startGame()" >Iniciar Jogo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function startGame() {
+      let nivel = document.getElementById('nivel').value
+
+      if (nivel === '') {
+        alert('Selecione um nivel de dificuldade para iniciar O Jogo')
+        return false
+      }
+
+      window.location.href = `./pages/game.html?${nivel}`
+    }
+  </script>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

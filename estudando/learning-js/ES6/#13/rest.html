@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+  ========= REST
+  <script>
+    
+    function soma(...param) {
+      let results = 0
+      console.log(param)
+
+      param.forEach(value => results += value)
+
+      return results
+    }
+
+    console.log(soma(1, 200, 52, 500, 3, 5, 7, 9))
+
+
+    function multiply(m, ...params) { // primeiro parametro impresso individualmente
+      let results = 0
+      console.log(m, params)
+
+      params.forEach(v => results += m * v)
+
+      return results
+    }
+
+    console.log(multiply(5, 7, 12, 3, 49))
+  </script>
+</body>
+
+</html>

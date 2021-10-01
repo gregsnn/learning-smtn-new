@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ex #4</title>
+
+   <style>
+     body {
+       background-color: #ccc;
+       font-size: 1.5rem;
+     }
+   </style>
+ </head>
+ <body>
+   
+
+  <script>
+    let name = prompt('Digite seu nome completo: ')
+    
+    document.body.innerHTML = `o seu nome eh <strong>${name}</strong><br />`
+    let nomeSemEspaco = name.split(' ').join('')
+    document.body.innerHTML += `seu nome tem ${nomeSemEspaco.length} letras<br />`
+    document.body.innerHTML += `a segunda letra do seu nome eh: <strong>'${name[1]}'</strong><br />`
+    document.body.innerHTML += `o primeiro indice da letra 'A' no seu nome eh: ${name.indexOf('a')}<br />`
+    document.body.innerHTML += `o ultimo indice da letra 'A' no seu nome eh: ${name.lastIndexOf('a')}<br />`
+    document.body.innerHTML += `as ultimas 3 letras do seu nome sao: <strong>'${name.slice(-3)}</strong>'<br />`
+    document.body.innerHTML += `as palavras do seu nome sao: <u>${name.split(' ')}</u><br />`
+    document.body.innerHTML += `seu nome com letras maiusculas: ${name.toUpperCase()}<br />`
+    document.body.innerHTML += `seu nome com letras minusculas: ${name.toLowerCase()}<br />`
+
+  </script>
+ </body>
+ </html>

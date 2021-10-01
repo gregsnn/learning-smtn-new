@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Array +++</h1>
+
+  <script>
+    // let listaFrutas = Array('Banana', 'Uva', 'Morango', 'Berinjela')
+
+    // document.write(listaFrutas.sort())
+
+    let listaNumeros = Array(12, 25, 110, 32, 7, 5, 332)
+
+    document.write(listaNumeros.sort(orderNum))
+
+    function orderNum(a, b) {
+      return a - b
+      // < 0 - a vem antes de b
+      // > 0 - b vem antes de a
+      // a == b - posicao eh mantida
+    }
+  </script>
+</body>
+</html>

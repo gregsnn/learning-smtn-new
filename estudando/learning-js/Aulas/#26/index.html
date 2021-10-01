@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Array ++</h1>
+
+  <script>
+    let listaFrutas = Array()
+
+    listaFrutas[0] = 'Banana'
+    listaFrutas[1] = 'Maca'
+    listaFrutas[2] = 'Morango'
+    listaFrutas[3] = 'Uva'
+
+    // caso nao exista o elemento eh retornado "-1"
+    let aux = listaFrutas.indexOf('Abacate')
+
+    if (aux === -1) {
+      document.write(`Elemento nao existe, tendo a posicao de ${aux}`)
+    } else {
+      document.write(`Elemento existe e esta na posicao ${aux} de ${listaFrutas.length}`)
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio #4</title>
+</head>
+<body>
+  <h1>Calc Soma / Subtracao</h1>
+
+  <script>
+    let firstNum = prompt('Digite um numero: ')
+    let operation = prompt('Deseja somar ou subtrair? ')
+    let secondNum = prompt('Digite um numero: ')
+
+    firstNum = parseInt(firstNum)
+    secondNum = parseInt(secondNum)
+
+    function calc(num1, op, num2) {
+      let resultado = 0
+
+      switch (op) {
+        case 'somar':
+          resultado = num1 + num2
+          break;
+        case 'subtrair':
+          resultado = num1 - num2
+          break;
+        default:
+          resultado = `calculo invalido`
+      }
+      return resultado
+    }
+
+    document.write(`O resultado da operacao foi: ${calc(firstNum, operation, secondNum)}`)
+  </script>
+</body>
+</html>

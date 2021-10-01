@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Lacos de Repeticao - Pratica</h1>
+
+  <script>
+    let listaFrutas = ['Banana', 'Uva', 'Morango', 'Maca']
+
+    for(let y = 0; y < listaFrutas.length; y++) {
+      document.write(listaFrutas[y] + '<br />')
+    }
+
+    document.write('<hr />')
+
+    let x = 1
+    while(x <= 10) {
+      let y = 1
+      while(y <= 10) {
+        r = x * y
+        document.write(`${x} x ${y} = ${r} <br /> ${y == 10 ? '<hr /> ' : ''}`)
+        y++
+      }
+      x++
+    }
+  </script>
+</body>
+</html>

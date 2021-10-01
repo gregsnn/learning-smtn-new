@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+<body>
+  4 Pilares'' OO
+  <br><br>
+  2 - Heranca = menos redundante // manutencao posterior // heranca progride - algo da class1 pode ser recuperado pela class3 passando pela class2
+  
+  <script>
+
+    class Animal {
+
+      constructor() {
+        this.cor = ''
+        this.tamanho = null
+        this.peso = null
+      }
+
+      dormir() {
+        console.log('Dormir')
+      }
+    }
+
+    class Cachorro extends Animal {
+      
+      constructor() {
+        super()
+        this.orelhas = 'grandes e caidas'
+      }
+
+      correr() {
+        console.log('Correr')
+      }
+
+      rosnar() {
+        console.log('Rosnar')
+      }
+    }
+
+    class Passaro extends Animal {
+
+      constructor() {
+        super()
+        this.bico = 'curto'
+      }
+
+      voar() {
+        console.log('voar')
+      }
+    }
+
+    class Papagaio extends Passaro {
+
+      constructor() {
+        super()
+        this.speak = true
+      }
+    }
+
+    let dog = new Cachorro()
+    let bird = new Passaro()
+    let parrot = new Papagaio()
+
+    // dog.dormir()
+    // bird.dormir()
+    // parrot.dormir()
+    // parrot.voar()
+
+    console.log(dog, bird, parrot)
+  </script>
+</body>
+</html>

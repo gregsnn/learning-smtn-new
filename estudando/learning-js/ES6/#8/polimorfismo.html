@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+  4 Pilares'' OO
+  <br><br>
+  4 - POLIMORFISMO = a Sobrescrita de metodos // objeto filho nao necessariamente se comporta igualmente ao pai
+
+  <script>
+    class Animal {
+
+      constructor(cor, tamanho, peso) {
+        this.cor = cor
+        this.tamanho = tamanho
+        this.peso = peso
+      }
+
+      dormir() {
+        console.log('Dormir')
+      }
+    }
+
+    class Passaro extends Animal {
+
+      constructor(bico, cor, tamanho, peso) {
+        super(cor, tamanho, peso)
+        this.bico = bico
+      }
+
+      voar() {
+        console.log('voar')
+      }
+    }
+
+    class Papagaio extends Passaro {
+
+      constructor(speak, bico, cor, tamanho, peso) {
+        super(bico, cor, tamanho, peso)
+        this.speak = speak
+      }
+    }
+
+    class Avestruz extends Passaro {
+
+      constructor() {
+        super('grande', 'Branco e preto', 250, 15000)
+      }
+
+      hideHead() {
+        console.log('Enterrar a cabeca')
+      }
+
+      voar() {
+        console.log('Nao sabe voar') // mudanca do comportamento 
+      }
+    }
+
+    let avestruz = new Avestruz()
+    let parrot = new Papagaio(true, 'medio', 'verde', 50, 250)
+
+    console.log(avestruz)
+    console.log(parrot)
+
+    avestruz.voar()
+    avestruz.hideHead()
+    parrot.voar()
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    //array
+    let array = [12, 20, 30, 40]
+
+    function test([a, b, , d, t = 'default']) {
+      console.log(a, b, d, t)
+    }
+    test(array)
+
+    //obj
+    let obj = {
+      a: 10,
+      b: 20,
+      c: 30,
+      d: 40
+    }
+
+    function testar( {a: x, c: y, z = 'default'} ) {
+      console.log(x, y, z)
+    }
+
+    testar(obj)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Document Object Model (DOM) ++</h1>
+
+  <button onclick="modifyStyles('#FF0000', '100px', '300px')">Red</button>
+  <button onclick="modifyStyles('#00FF00', '500px', '500px')">Green</button>
+  <button onclick="modifyStyles('#0000FF', '100px', '50px')">Blue</button>
+
+  <hr />
+  
+  <div id="colorizedDiv" style="border: solid 1px #000; width: 250px; height: 250px"></div>
+  <script>
+    function modifyStyles(bgColor, w, h) {
+      document.getElementById('colorizedDiv').style.background = bgColor
+      document.getElementById('colorizedDiv').style.width = w
+      document.getElementById('colorizedDiv').style.height = h
+    }
+  </script>
+</body>
+</html>

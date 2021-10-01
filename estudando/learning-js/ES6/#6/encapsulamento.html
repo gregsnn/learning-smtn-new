@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+<body>
+  4 Pilares'' OO
+  <br><br>
+  2 - Encapsulamento = Lado conceitual e tecnico // conceitual = encapsular para tornar objeto seguro
+  
+  <script>
+
+    class Televisao {
+
+      constructor() {
+        this._canais = [2, 4, 5, 7, 10]
+        this._canalAtivo = 5
+        this._volume = 5
+      }
+
+      // getters setters
+      get canalAtivo() {
+        return this._canalAtivo
+      }
+
+      set canalAtivo(canal) {
+        this._canais.indexOf(canal) !== -1 ? this._canalAtivo = canal : ''
+      }
+    }
+    
+    let tv = new Televisao()
+
+    tv.canalAtivo = 11 // set
+    console.log(`o canal atualmente ativo e o ${tv.canalAtivo}`) // get
+
+  </script>
+</body>
+</html>

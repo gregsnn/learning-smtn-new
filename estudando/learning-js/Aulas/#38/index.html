@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>BOM - Browser Object Model +</h1>
+
+  <script>
+    let height = window.screen.availHeight
+    let width = window.screen.availWidth
+
+    if(width < 500) {
+      document.write(`versao mobile`)
+    } else {
+      document.write(`versao web`)
+    }
+  </script>
+</body>
+</html>

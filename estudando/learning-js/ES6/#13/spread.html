@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+  ========= SPREAD
+  <script>
+    
+    // string
+    let titleArticle = 'Como utilizar Rest/Spread'
+
+    console.log(titleArticle)
+    console.log(...titleArticle)
+    console.log([...titleArticle])
+
+    // array
+    let listaCurso = ['NodeJS', 'MongoDB', 'ES6, Typescript e Angular 4']
+    let listaCurso2 = ['Multiplataforma ANDROID/IOS', 'Introducao ao GNU/Linux']
+    let listaCursoCompleta = ['Web Completo', ...listaCurso, 'Android Completo', ...listaCurso2]
+
+    console.log(listaCursoCompleta)
+
+    //objetos
+    let pessoa = { nome: 'Joao', idade: 28 }
+    let clone = { endereco: 'Rua ABC', ...pessoa}
+
+    console.log(clone)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>Document Object Model (DOM) +</h1>
+
+  <input 
+  onkeyup="saveCarac()"
+  id="input_entry"
+  type="text"
+  placeholder="Digite um carac aqui"
+  >
+
+  <hr />
+
+  <span>Letras:</span>
+  <input type="text" name="string" id="input_str" disabled />
+
+  <span>Numeros:</span>
+  <input type="number" name="number" id="input_num" disabled />
+
+  <script>
+    function saveCarac() {
+      let entry = document.getElementById('input_entry').value
+      document.getElementById('input_entry').value = ''
+
+      entry.trim()
+
+      switch(entry) {
+        case '0': case '1': case '2': 
+        case '3': case '4': case '5': 
+        case '6': case '7': case '8':
+        case '9':
+          document.getElementById('input_num').value += entry
+          break;
+        default:
+          document.getElementById('input_str').value += entry
+      }
+    }
+  </script>
+</body>
+</html>

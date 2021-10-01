@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+<body>
+  4 Pilares'' OO
+  <br>
+  1 - Abstracao = compreender as coisas do mundo real e trazer para dentro do sistema (ENTIDADE, IDENTIDADE, CARACTERISTICA, ACOES) - abstrair caracteristicas que tenham um valor significativo - acoes devem fazer sentido no contexto da aplicacao
+  
+  <script>
+    /*
+    let qtdPes = 4
+    let giratoria = false
+    let cor = 'azul'
+
+    let cadeiras = [
+      {
+        qtdPernas: 4,
+        giratoria: false,
+        cor: 'azul'
+      },{
+        qtdPernas: 1,
+        giratoria: true,
+        cor: 'vermelha'
+      }
+    ]
+
+    function GirarCadeira(indice) {
+      cadeiras[indice]['giratoria'] === true ? console.log('girou') : console.log('cadeira nao giratoria')
+    }
+
+    function addCadeira(qtdPernas, giratoria, cor) {
+
+      let cadeira = [
+        {
+          qtdPernas: qtdPernas,
+          giratoria: giratoria,
+          cor: cor
+        }
+      ]
+
+      cadeiras.push(cadeira)
+    }
+    addCadeira(3, false, 'preto')
+    GirarCadeira(Math.round(Math.random()))
+
+    console.log(cadeiras)
+    */
+
+    // ------------------------------------
+
+    class Cadeira {
+
+      constructor(qtdPernas, giratoria, cor) {
+        this.qtdPernas = qtdPernas
+        this.giratoria = giratoria
+        this.cor = cor
+      }
+
+      GirarCaderia() {
+        this.giratoria === true ? console.log('girou') : console.log('nao girou')
+      }
+
+    }
+
+    let cadeiras = []
+    cadeiras.push(new Cadeira(4, false, 'azul'))
+    cadeiras.push(new Cadeira(1, true, 'vermelho'))
+
+    console.log(cadeiras)
+
+  </script>
+</body>
+</html>

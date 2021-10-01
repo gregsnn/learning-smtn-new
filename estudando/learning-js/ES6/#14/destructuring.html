@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    //array
+    let frutas = ['abacaxi', 'uva', 'pera', 'mamao']
+
+    // let [a, b, , c] = frutas // pular indice
+    // let [a, b = 'default', c, d, e = 'default'] = frutas
+    let coisas = [['abacaxi', 'uva', 'pera', 'mamao'], ['Jose', 'Maria']]
+    // let [ , [ , nome ] ] = coisas
+    let [[, , fruta]] = coisas
+
+    console.log(fruta)
+
+  </script>
+</body>
+
+</html>

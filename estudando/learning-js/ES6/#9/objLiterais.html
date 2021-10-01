@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+
+<body>
+
+  <script>
+    
+    class Product { // sintax de classe
+
+      constructor(description, price) {
+        this.description = description
+        this.price = price
+      }
+
+      seeDescription() {
+        console.log(`${this.description} por apenas ${this.price}`)
+      }
+    }
+
+    let prod = new Product('MacBook', 5200)
+    prod.seeDescription()
+
+    //-------------------------------------
+
+    let prodLiteral = { // obj literal
+      description: 'Geladeira',
+      price: 2100,
+      seeDescription: function() {
+        console.log(`${this.description} por apenas ${this.price}`)
+      } 
+    }
+
+    prodLiteral.seeDescription()
+
+    /*
+    formulario --> servidor
+      recupera dados e monta um objeto literal
+        obj literal -> JSON -> HTTP -> Server -> Armazena
+    */
+  </script>
+</body>
+
+</html>

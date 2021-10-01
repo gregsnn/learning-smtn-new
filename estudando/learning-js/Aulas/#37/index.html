@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JavaScript</title>
+</head>
+<body>
+  <h1>BOM - Browser Object Model</h1>
+  
+  <button onclick="openPopUp()">Abrir janela</button>
+  <button onclick="closePopUp()">Fechar janela</button>
+  <button onclick="window.print()">Imprimir tela</button>
+
+  <script>
+    let janela
+
+    function openPopUp() {
+      janela = window.open("", 'newWindow', 'width=150, height=150')
+
+      return janela
+    }
+
+    function closePopUp() {
+      janela.close()
+    }
+  </script>
+</body>
+</html>

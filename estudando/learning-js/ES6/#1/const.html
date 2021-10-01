@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning ES6</title>
+</head>
+<body>
+  
+  <script>
+    const serie = 'kik'
+
+    function aside() { // declarar const dentro de funcao nao afeta escopo global
+      const serie = 'lol'
+      console.log(serie)
+    }
+    aside()
+
+    console.log(serie)
+  </script>
+</body>
+</html>

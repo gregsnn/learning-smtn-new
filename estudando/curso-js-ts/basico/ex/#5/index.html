@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 05</title>
+</head>
+<body>
+  <h1>Seu numero e <span id="num">0</span></h1>
+
+  <div id="text">teste</div>
+
+  <script>
+    const num1 = Number(prompt('Digite um numero: '));
+    const text = document.getElementById('text');
+    
+    document.getElementById('num').innerHTML = num1;
+    text.innerHTML = `<p>Raiz quadrada: ${num1 ** (1/2)} </p>`;
+    text.innerHTML += `<p> ${num1} e inteiro? ${Number.isInteger(num1) === true ? 'Sim, ele eh' : 'Nao, ele nao eh'} </p>`;
+    text.innerHTML += `<p> ${num1} e NaN? ${Number.isNaN(num1) === true ? 'Sim, ele eh' : 'Nao, ele nao eh'} </p>`;
+    text.innerHTML += `<p> Arredondado para baixo: ${Math.floor(num1)} </p>`;
+    text.innerHTML += `<p> Arredondado para cima: ${Math.ceil(num1)} </p>`;
+    text.innerHTML += `<p> Com duas casas decimais: ${num1.toFixed(2)} </p>`;
+  </script>
+</body>
+</html>
