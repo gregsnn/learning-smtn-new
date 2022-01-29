@@ -1,0 +1,93 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategrey;
+  font-family: sans-serif;
+  color: lightslategray;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.form {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.857);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  margin: auto 20px;
+}
+
+.form h2 {
+  padding: 10px 0 30px;
+  text-align: center;
+}
+
+.form .form-fields {
+  margin: 0 0 20px;
+}
+
+.form label {
+  display: block;
+  font-size: 12px;
+  color: rgb(55, 55, 55);
+}
+
+::placeholder {
+  color: rgb(114, 114, 114);
+  font-size: 12px;
+}
+
+.form input[type] {
+  width: 100%;
+  border: 1px solid grey;
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: border 300ms ease-in-out;
+}
+
+.form input[type]:focus {
+  border-color: lightskyblue;
+}
+
+.form button {
+  border: none;
+  background-color: rgba(0, 100, 200, 1);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  color: lightgrey;
+  border-radius: 5px;
+  transition: filter 300ms ease-in-out;
+}
+
+.form button:hover {
+  filter: brightness(80%)
+}
+
+.form .error-message {
+  font-size: 10px;
+  padding: 5px 0;
+  color: lightcoral;
+  font-style: italic;
+  display: none;
+}
+
+.form .show-error-message .error-message {
+  display: initial;
+}
+
+.form .show-error-message input[type] {
+  border-color: lightcoral;
+}
