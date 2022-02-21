@@ -1,0 +1,40 @@
+$accent-color: var(--accent-color);
+
+border {
+	border: none;
+	border-bottom: 1px solid var(--dark-color);
+}
+
+.form {
+	&__input {
+		display: flex;
+		height: 35px;
+
+		input {
+			@extend border;
+
+			width: 200px;
+
+			&::placeholder {
+				padding-left: 10px
+			}
+		}
+
+		button {
+			@extend border;
+			border-radius: 0 10px 10px 0;
+
+			width: 120px;
+
+			background-color: var(--accent-color);
+
+			transition: all 250ms ease-out;
+
+			&:hover {
+				opacity: .7;
+				color: var(--light-color);
+				background-color: var(--primary-color);
+			}
+		}
+	}
+}

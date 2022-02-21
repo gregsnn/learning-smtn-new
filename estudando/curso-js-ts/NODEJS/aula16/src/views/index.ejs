@@ -1,0 +1,29 @@
+<%- include('includes/head'); %>
+
+<section class="container">
+
+  <h1>
+      <!-- <% if(typeof title !== 'undefined') { %>
+        <%- title %>
+      <% } else { %>
+        Default Title
+      <% } %>  -->
+      <!-- <% numbers.forEach( num => { %>
+        <%= num %> <br>
+      <% } ) %> -->
+
+      <%- variable  %>
+
+      <%# comentario em ejs %>
+  </h1>
+
+  <form action="/" method="POST">
+    <label for="cliente">
+      Cliente
+      <input type="text" id="cliente" name="cliente">
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<%- include('includes/footer'); %>

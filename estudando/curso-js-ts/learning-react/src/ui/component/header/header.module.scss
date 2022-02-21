@@ -1,0 +1,65 @@
+@mixin colorin($type, $color) {
+	@if $color == primary {
+		#{$type}: var(--primary-color);
+	} @else if $color == secondary {
+		#{$type}: var(--secondary-color);
+	} @else if $color == accent {
+		#{$type}: var(--accent-color);
+	} @else if $color == light {
+		#{$type}: var(--light-color);
+	} @else {
+		#{$type}: var(--dark-color);
+	}
+}
+
+neon {
+	text-shadow: 0.5px 0.1px 1.2px var(--accent-color), -0.5px -0.1px 1.2px var(--accent-color);
+}
+
+.container {
+	@include colorin(background-color, dark);
+
+	.header {
+		max-width: 90%;
+		margin: 0 auto;
+
+		font-size: 1.2rem;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		.nav {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+
+			&__figure {
+				display: flex;
+				align-items: center;
+				height: 75px;
+				width: 65px;
+
+				img {
+					border-radius: 100%;
+				}
+			}
+
+			&__list {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+
+				li {
+					a {
+						@include colorin(color, accent);
+						transition: all 300ms ease-in-out;
+
+						&:hover {
+							opacity: 0.7;
+							@extend neon;
+						}
+					}
+				}
+			}
+		}
+	}
+}

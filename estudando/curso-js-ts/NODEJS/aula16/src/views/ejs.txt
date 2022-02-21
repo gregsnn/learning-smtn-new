@@ -1,0 +1,6 @@
+<% CONTROLE DE FLUXO %> (if, for ...)
+<%= IMPRIME ESCAPANDO CARACTERES %> - mostra
+<%- IMPRIME SEM ESCAPAR CARACTERES %> - executa
+<%# COMENTARIO %>
+<%- include('caminho/arquivo) %>
+
